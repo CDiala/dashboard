@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -15,7 +17,9 @@ import { SharedModule } from "src/app/shared/shared.module";
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    MatSidenavModule,
+    MatDividerModule
   ]
 })
 export class DefaultModule { }
