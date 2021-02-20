@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header (toggle-sidebar)="onClick()"></app-header>
 
 <mat-drawer-container>
-    <mat-drawer mode="side" opened>
+    <mat-drawer mode="side" [opened]="isOpened">
         <app-sidebar></app-sidebar> 
     </mat-drawer>
     <mat-drawer-content>

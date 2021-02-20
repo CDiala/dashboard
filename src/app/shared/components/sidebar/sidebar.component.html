@@ -1,1 +1,28 @@
-<p>sidebar works!</p>
+
+<mat-nav-list>
+    <div class="profile-card">
+        <h2>Chibuzo Diala</h2>
+        <p>JavaScript | Angular</p>
+        <img class="profile-pic" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Shiba Inu">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 class="sub-header" matSubheader>Pages</h2>
+
+    <a class="a-link" mat-list-item routerLink="/">Dashboard</a>
+    <a class="a-link" mat-list-item routerLink="/posts">Posts</a>
+    <!-- <a class="a-link" mat-list-item routerLink="/posts">Posts</a> -->
+
+    <mat-divider></mat-divider>
+
+    <h2 class="sub-header" matSubheader>Contact Details</h2>
+    
+    <a mat-list-item>
+        <mat-icon>contacts</mat-icon><span>08067242726</span>
+    </a>
+    <a mat-list-item>
+        <mat-icon>email</mat-icon><span>dialachibuzo@yahoo.com</span>
+    </a>
+
+</mat-nav-list>

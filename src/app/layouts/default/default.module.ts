@@ -6,13 +6,15 @@ import { RouterModule } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatDividerModule } from '@angular/material/divider';
+import { PostsComponent } from 'src/app/modules/posts/posts.component';
 
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
-    DashboardComponent
+    DashboardComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,

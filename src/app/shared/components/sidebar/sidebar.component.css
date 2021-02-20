@@ -1,0 +1,44 @@
+.profile-card {
+    padding: 0 0.2rem 0.2rem 0.2rem;
+    text-align: center;
+}
+
+.profile-pic {
+    /* min-width: 50%; */
+    width: 60%;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+div h2 {
+    margin-bottom: 1px;
+    /* font-size: 1rem; */
+}
+
+/* h2,p {
+    min-width: 100%;
+} */
+
+/* mat-nav-list {
+    padding: 0.3rem 0.5rem;
+} */
+
+a {
+    text-align: right;
+    font-size: bold;
+}
+
+.sub-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+span {
+    font-size: 80%;
+}
+
+mat-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
