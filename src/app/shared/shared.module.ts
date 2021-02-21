@@ -12,6 +12,10 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatListModule } from '@angular/material/list';
 import { AreaComponent } from './widgets/area/area.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { AdminCardComponent } from './widgets/admin-card/admin-card.component';
+import { CardComponent } from './widgets/card/card.component';
+
 // import {  } from "@angular/material";
 
 
@@ -20,7 +24,9 @@ import { AreaComponent } from './widgets/area/area.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    AdminCardComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -31,13 +37,16 @@ import { AreaComponent } from './widgets/area/area.component';
     FlexLayoutModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    HighchartsChartModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent    
+    AreaComponent,
+    AdminCardComponent,
+    CardComponent    
   ]
 })
 export class SharedModule { }

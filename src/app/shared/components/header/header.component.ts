@@ -12,8 +12,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   menuClicked() {
     this.toggleSidebar.emit();
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      );
+    }, 300);
   }
+
 }
