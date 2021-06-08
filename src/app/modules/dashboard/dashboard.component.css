@@ -1,3 +1,33 @@
 .mat-card {
     margin: 0;
 }
+
+.stats-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
+    overflow: scroll;
+}
+
+.my-stats {
+    min-width: 248px;
+    max-width: 300px;
+}
+
+
+@media screen and (min-width: 573px) {
+    .stats-card {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 100px;
+    }
+}
+
+@media screen and (min-width: 1244px) {
+    .stats-card {
+        grid-template-columns: repeat(4, 1fr);
+        /* column-gap: 10px;
+        row-gap: 100px; */
+    }
+}
