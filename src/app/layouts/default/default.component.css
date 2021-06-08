@@ -5,7 +5,7 @@
 }
 
 mat-drawer {
-    width: 20vw;
+    width: 30vw;
     min-width: 140px;
 }
 
@@ -15,4 +15,10 @@ mat-drawer-container {
 
 mat-drawer-content {
     padding: 20px;
+}
+
+@media screen and (max-width: 910px) {
+    mat-drawer {
+        display: none;
+    }
 }
