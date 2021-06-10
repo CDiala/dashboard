@@ -1,8 +1,12 @@
 :host {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
-  padding: 20px 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+mat-divider {
+  margin: 10px 0;
 }
 
 .stats-card {
