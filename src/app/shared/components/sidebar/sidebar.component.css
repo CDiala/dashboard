@@ -1,44 +1,32 @@
 .profile-card {
-    padding: 0 0.2rem 0.2rem 0.2rem;
-    text-align: center;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+
 }
 
-.profile-pic {
-    /* min-width: 50%; */
-    width: 60%;
-    object-fit: cover;
-    border-radius: 100%;
-    margin-bottom: 10px;
+img {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-div h2 {
-    margin-bottom: 1px;
-    /* font-size: 1rem; */
+.header {
+  text-align: center;
 }
 
-/* h2,p {
-    min-width: 100%;
-} */
-
-/* mat-nav-list {
-    padding: 0.3rem 0.5rem;
-} */
-
-a {
-    text-align: right;
-    font-size: bold;
+h4 {
+  margin-top: -20px;
 }
 
-.sub-header {
-    padding-top: 0;
-    padding-bottom: 0;
+.contact-me {
+  margin-right: 3%;
+  vertical-align: middle;
 }
 
-span {
-    /* font-size: 60%; */
-}
-
-mat-icon {
-    vertical-align: middle;
-    margin-right: 5px;
+#con {
+  min-width: 150px;
+  max-width: 200px;
+  width: auto;
+  text-align: center;
 }

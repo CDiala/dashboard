@@ -1,32 +1,31 @@
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../shared/components/header/header.component';
-import { FooterComponent } from '../shared/components/footer/footer.component';
-import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
 import { MatDividerModule } from "@angular/material/divider";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatMenuModule } from "@angular/material/menu";
-import { MatListModule } from '@angular/material/list';
-import { AreaComponent } from './widgets/area/area.component';
+import { MatListModule } from "@angular/material/list";
+import { LineComponent } from './widgets/line/line.component';
 import { HighchartsChartModule } from 'highcharts-angular';
-import { AdminCardComponent } from './widgets/admin-card/admin-card.component';
 import { CardComponent } from './widgets/card/card.component';
-
-// import {  } from "@angular/material";
-
+import { PieComponent } from './widgets/pie/pie.component';
+import { BarComponent } from './widgets/bar/bar.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent,
     SidebarComponent,
-    AreaComponent,
-    AdminCardComponent,
-    CardComponent
+    FooterComponent,
+    LineComponent,
+    CardComponent,
+    PieComponent,
+    BarComponent
   ],
   imports: [
     CommonModule,
@@ -42,11 +41,12 @@ import { CardComponent } from './widgets/card/card.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent,
     SidebarComponent,
-    AreaComponent,
-    AdminCardComponent,
-    CardComponent    
+    FooterComponent,
+    LineComponent,
+    CardComponent,
+    PieComponent,
+    BarComponent
   ]
 })
 export class SharedModule { }

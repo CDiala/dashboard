@@ -26,6 +26,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     FlexLayoutModule,
     MatCardModule
+  ],
+  exports: [
+    DashboardComponent
   ]
 })
 export class DefaultModule { }

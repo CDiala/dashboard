@@ -1,28 +1,38 @@
-
 <mat-nav-list>
-    <div class="profile-card">
-        <h2>Chibuzo Diala</h2>
-        <p>JavaScript | Angular</p>
-        <img class="profile-pic" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Shiba Inu">
+  <div class="profile-card">
+    <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?cs=srgb&dl=pexels-pixabay-414102.jpg&fm=jpg" alt="Chibuzo Diala">
+    <div class="header">
+      <h2>Chibuzo Diala</h2>
+      <h4>Angular Developer / Enthusiast</h4>
     </div>
+  </div>
 
-    <mat-divider></mat-divider>
+  <mat-divider></mat-divider>
 
-    <h2 class="sub-header" matSubheader>Pages</h2>
+  <h2 matSubheader>Projects</h2>
 
-    <a class="a-link" mat-list-item routerLink="/">Dashboard</a>
-    <a class="a-link" mat-list-item routerLink="/posts">Posts</a>
-    <!-- <a class="a-link" mat-list-item routerLink="/posts">Posts</a> -->
+  <a mat-list-item routerLink="/home" routerLinkActive="router-link-active" >Home</a>
+  <a mat-list-item routerLink="/dashboard" routerLinkActive="router-link-active" >Dashboard</a>
+  <a mat-list-item routerLink="/posts" routerLinkActive="router-link-active" >Posts</a>
+  <a mat-list-item routerLink="/articles" routerLinkActive="router-link-active" >Articles</a>
 
-    <mat-divider></mat-divider>
+  <!-- <a mat-list-item routerLink="/" routerLinkActive="router-link-active" >Home</a>
+  <a mat-list-item routerLink="/posts" routerLinkActive="router-link-active" >About</a>
+  <a mat-list-item routerLink="/articles" routerLinkActive="router-link-active" >My Projects</a> -->
 
-    <h2 class="sub-header" matSubheader>Contact Details</h2>
-    
-    <a mat-list-item>
-        <mat-icon>contacts</mat-icon><span>08067242726</span>
-    </a>
-    <a mat-list-item>
-        <mat-icon>email</mat-icon><span>dialachibuzo@yahoo.com</span>
-    </a>
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Contact Me</h2>
+
+  <a mat-list-item id="con">
+    <mat-icon class="contact-me">contact_phone</mat-icon>08067242726
+  </a>
+
+  <a mat-list-item id="con">
+    <mat-icon class="contact-me">email</mat-icon>dialachibuzo@yahoo.com
+  </a>
+
+  <mat-divider></mat-divider>
 
 </mat-nav-list>
+

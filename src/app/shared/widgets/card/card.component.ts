@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
+
 
 @Component({
   selector: 'app-widget-card',
@@ -9,12 +10,13 @@ import HC_exporting from 'highcharts/modules/exporting';
 })
 export class CardComponent implements OnInit {
 
-  @Input('title') label: string = '';
-  @Input('total') total: string = '';
-  @Input('percentage') percentage: string = '';
+  @Input() label?: string;
+  @Input() total?: string;
+  @Input() percentage?: string;
+
+  chartOptions: any = {};
 
   Highcharts = Highcharts;
-  chartOptions = {};
 
   constructor() { }
 
@@ -22,22 +24,49 @@ export class CardComponent implements OnInit {
 
     this.chartOptions = {
       chart: {
-        type: 'area',
-        backgroundColor: null,
-        borderWidth: 0,
-        margin: [2,2,2,2],
-        height: 80
+          type: 'area',
+          backgroundcolor: null,
+          borderwidth: 0,
+          margin: [2,2,2,2],
+          height: 80
       },
       title: {
-        // text: 'Historic and Estimated Worldwide Population Growth by Region'
-        text: null
+          text: null
       },
       subtitle: {
-        // text: 'Source: Wikipedia.org'
-        text: null
+          text: null
+      },
+      xAxis: {
+          // categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+          // tickmarkPlacement: 'on',
+          title: {
+              // enabled: false
+              text: null
+          },
+          labels: {
+            enabled: false
+          },
+          startOnTick: false,
+          endOnTick: false,
+          tickOptions: []
+      },
+      yAxis: {
+          title: {
+              text: 'Billions'
+          },
+          // labels: {
+          //     formatter: function () {
+          //         return this.value / 1000;
+          //     }
+          // }
+          labels: {
+            enabled: false
+          },
+          startOnTick: false,
+          endOnTick: false,
+          tickOptions: []
       },
       tooltip: {
-        // enabled: false,
         split: true,
         outside: true
         // valueSuffix: ' millions'
@@ -51,56 +80,22 @@ export class CardComponent implements OnInit {
       exporting: {
         enabled: false
       },
-      xAxis: {
-        labels: {
-          enabled: false
-        },
-        title: {
-          text: null
-        },
-        startOnTick: false,
-        endOnTick: false,
-        tickOptions: []
-      },
-      yAxis: {
-        labels: {
-          enabled: false
-        },
-        title: {
-          text: null
-        },
-        startOnTick: false,
-        endOnTick: false,
-        tickOptions: []
-      },
-      plotOptions: {
-        area: {
-          stacking: 'normal',
-          lineColor: '#666666',
-          lineWidth: 1,
-          marker: {
-            lineWidth: 1,
-            lineColor: '#666666'
-          }
-        }
-      },
+      // plotOptions: {
+      //     area: {
+      //         stacking: 'normal',
+      //         lineColor: '#666666',
+      //         lineWidth: 1,
+      //         marker: {
+      //             lineWidth: 1,
+      //             lineColor: '#666666'
+      //         }
+      //     }
+      // },
       series: [{
-      //   name: 'Nigeria',
-      //   data: [502, 635, 809, 947, 1402, 3634, 5268]
-      // }, {
-      //   name: 'Togo',
-      //   data: [106, 107, 111, 133, 221, 767, 1766]
-      // }, {
-      //   name: 'Algeria',
-      //   data: [6, 6, 6, 10, 17, 29, 37]
-      // }, {
-        name: 'Ethiopia',
-        data: [0.4, 0.6, 1.0, 2, 3.5, 5.8, 8.4]
-      }, {
-        name: 'Cote D\'Ivoire',
-        data: [0.4, 0.6, 1.0, 2, 3.5, 5.8, 8.4]
+        // name: 'Nigeria',
+        data: [2, 2, 2, 6, 13, 30, 46]
       }]
-    };
+  }
 
     HC_exporting(this.Highcharts);
 

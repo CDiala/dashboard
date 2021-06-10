@@ -1,33 +1,72 @@
-.mat-card {
-    margin: 0;
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+}
+
+mat-divider {
+  margin: 10px 0;
 }
 
 .stats-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 20px;
-    overflow: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.my-stats {
-    min-width: 248px;
-    max-width: 300px;
+mat-card, #bar, #pie {
+  flex-grow: 1;
+  height: fit-content;
+  margin-bottom: 15px;
+  width: 100%;
+  min-width: 20%;
 }
 
-
-@media screen and (min-width: 573px) {
-    .stats-card {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 10px;
-        row-gap: 100px;
-    }
+#pie {
+  margin-bottom: 0;
+  text-align: center;
 }
 
-@media screen and (min-width: 1244px) {
-    .stats-card {
-        grid-template-columns: repeat(4, 1fr);
-        /* column-gap: 10px;
-        row-gap: 100px; */
-    }
+mat-card:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 637px) {
+  mat-card {
+    width: 35%;
+    margin-left: 10px;
+  }
+
+  mat-card:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  mat-card:nth-child(3n) {
+    margin-bottom: 0;
+  }
+
+  #bar, #pie {
+    width: 48%;
+    margin-bottom: 0;
+  }
+
+  #pie {
+    margin-left: 10px;
+  }
+
+}
+
+@media screen and (min-width: 1115px) {
+  mat-card {
+    width: 15%;
+  }
+
+  mat-card:nth-child(3n) {
+    margin-left: 10px;
+  }
+
+  mat-card:nth-child(1), mat-card:nth-child(2) {
+    margin-bottom: 0;
+  }
+
 }
