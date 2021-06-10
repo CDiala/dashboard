@@ -1,4 +1,7 @@
-  ul li{
-      list-style: none;
-  }
+mat-toolbar {
+  background-color: #bf7223bf;
+}
 
+ul li {
+  list-style: none;
+}

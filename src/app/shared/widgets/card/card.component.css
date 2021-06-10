@@ -1,27 +1,20 @@
-p {
-    margin: 0;
-}
-
 h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .total {
-    font-size: 2em;
+  font-size:3em;
 }
 
 .mat-icon, .description {
-    color: green;
-    font-size: 2em;
+  color: green;
+  font-size: 2em;
 }
 
 .mat-icon {
-    position: relative;
-    /* padding: 0 20px; */
-    /* padding: 0 0 0 10px; */
-    margin: 0 10px;
-    top: 5px;
+  position: relative;
+  padding: 0 8px;
+  top: 5px;
+  width: auto;
 }
